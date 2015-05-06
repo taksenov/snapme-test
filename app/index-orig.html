@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from snapme.ru/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 May 2015 11:00:09 GMT -->
+<head lang="ru">
+        <meta charset="utf-8">
+
+        <meta property="og:title" content="snapme">
+        <meta property="og:url" content="index.html">
+        <meta property="og:site_name" content="snapme"/>
+        <meta property="og:description" content="Описание здесь"/>
+        <meta property="og:image" content="img/test.jpg"/>
+        <meta property="fb:app_id" content="912438312141474"/>
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@burlesc0" />
+        <meta name="twitter:title" content="snapme" />
+        <meta name="twitter:description" content="Описание здесь." />
+        <meta name="twitter:image" content="img/test.jpg" />
+
+        <link rel="stylesheet" href="style/bootstrap.min.css">
+        <link rel="stylesheet" href="style/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="style/social-likes_flat.css">
+        <link rel="stylesheet" href="style/jasny-bootstrap.min.css">
+        <link rel="stylesheet" href="style/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
+
+        <script src="js/jquery-2.1.3.min.js"></script>
+        <script type="text/javascript" src="../vk.com/js/api/openapic451.js?116"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jasny-bootstrap.min.js"></script>
+        <script src="js/source.js"></script>
+        <script src="js/social-likes.min.js"></script>
+
+        <link rel="icon" type="image/png" href="fav.ico">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>snapme</title>
+    </head>
+
+    <body>
+    <div id = 'fb-root'></div>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '912438312141474',
+                xfbml      : true,
+                version    : 'v2.2'
+            });
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "../connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+        <div id="myCarousel" data-interval = '20000' class="carousel container slide">
+            <div class="carousel-inner">
+                <div class="active item background" id = 'back-1'>
+                </div>
+                <div class="item background" id = 'back-2'>
+                </div>
+            </div>
+        </div>
+
+        <div id = 'wrap'>
+            <div class = 'container'>
+                <div class = 'row'>
+                    <div class = 'col-md-4 content-column'>
+                        <p id = 'logo'>snapme</p>
+                    </div>
+
+                    <div class = "col-md-4 content-column">
+
+                        <p class = 'thin'>Добро пожаловать на страницу записи на фотосессию!</p>
+                        <p class = 'thin'>После того, как вы заполните форму, мы свяжемся с вами для согласования времени съемки. </p>
+
+                        <form id = 'form' method="post" autocomplete="off">
+                            <div class="form-group">
+                                <div class = 'row form-inputs'>
+                                    <div class = 'col-lg-6'>
+                                        <input class = 'text transparent' id = 'snapme-form-name' name = 'name' type="text" placeholder="Имя" required autofocus>
+                                    </div>
+                                    <div class = 'col-lg-6'>
+                                        <input class = 'text transparent' id = 'snapme-form-second-name' name = 'second-name' type="text" placeholder="Фамилия" required>
+                                    </div>
+                                    <div class = 'col-lg-6'>
+                                        <input class = 'text transparent' id = 'snapme-form-email' name = 'email' type="email" placeholder="e-mail" required>
+                                    </div>
+                                    <div class = 'col-lg-6'>
+                                        <input class = 'text transparent' id = 'snapme-form-phone' name = 'phone' data-mask="+7 999-999-99-99" placeholder="Телефон" required>
+                                    </div>
+                                    <div class = 'col-lg-6'>
+                                        <input class = 'text transparent' id = 'snapme-form-city' name = 'city' type="text" placeholder="Город">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p id = 'add-photo-links-header'>Добавьте ссылки на ваши фотографии:</p>
+
+                            <div id = 'links'>
+                                <img class = 'addSign transparent' id = 'add-link' src="img/plus.svg" alt=""/>
+                                <input type="url" id = 'new-link-url'><!--
+                            --><div class = 'photolink'>
+                                    <a target="_blank" href="#">vk.com</a>
+                                    <img  class = 'removeLink' src="img/cross.svg" alt="">
+                                </div><!--
+                            --><div class = 'photolink'>
+                                    <a target="_blank" href="#">instagram.com</a>
+                                <img class = 'removeLink' src="img/cross.svg" alt="">
+                               </div>
+                            </div>
+
+                            <div class = 'row'>
+                                <div class = 'col-xs-6 photo-type-column'>
+                                    <div class="form-group">
+                                        <p id = 'photo-type-header'>Тип съемки:</p>
+                                        <div class = 'snapme-photo-type'>
+                                            <input class = 'checkbox' id = 'id1' name = 'photo-type[]' value = 'интерьер' type="checkbox">
+                                            <label for="id1">интерьер</label>
+                                        </div>
+                                        <div class = 'snapme-photo-type'>
+                                            <input class = 'checkbox' id = 'id2' name = 'photo-type[]' value = 'студия' type="checkbox">
+                                            <label for="id2">студия</label>
+                                        </div>
+                                        <div class = 'snapme-photo-type'>
+                                            <input class = 'checkbox' id = 'id3' name = 'photo-type[]' value = 'природа' type="checkbox">
+                                            <label for="id3">природа</label>
+                                        </div>
+                                        <div class = 'snapme-photo-type' id = 'insert-place'>
+                                            <img class = 'addSign ' id = 'add-photo-type' src="img/plus.svg" alt=""/>
+                                            <input type="text" id = 'new-photo-type-name' placeholder='другое'>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class = 'col-xs-6 payment-type-column'>
+                                    <div class="form-group" id = 'payment-types'>
+                                        <p id = 'payment-type-header'>Оплата:</p>
+                                        <div class = 'snapme-payment-type'>
+                                            <input class = 'checkbox' id = 'payment-free' name = 'payment-type[]' value = 'бесплатно' type="checkbox">
+                                            <label id = 'payment-type-free' for="payment-free">бесплатно</label>
+                                        </div>
+                                        <div class = 'snapme-payment-type'>
+                                            <input class = 'checkbox payment' id = 'payment-rent' name = 'payment-type[]' value = 'аренда' type="checkbox">
+                                            <label class = 'payment-type-option' for="payment-rent">оплата аренды</label>
+                                        </div>
+                                        <div class = 'snapme-payment-type'>
+                                            <input class = 'checkbox payment' id = 'payment-visagist' name = 'payment-type[]' value = 'визажист' type="checkbox">
+                                            <label class = 'payment-type-option' for="payment-visagist">оплата визажиста</label>
+                                        </div>
+                                        <div class = 'snapme-payment-type'>
+                                            <input class = 'checkbox payment' id = 'payment-photo' name = 'payment-type[]' value = 'съемка' type="checkbox">
+                                            <label class = 'payment-type-option' for="payment-photo">оплата съемки</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type = 'submit' id = 'snapme-form-submit' value = 'Отправить'>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class = 'footer'>
+            <div class="social-likes social-likes_notext">
+                <div class="facebook" title="Поделиться ссылкой на Фейсбуке"></div>
+                <div class="twitter" title="Поделиться ссылкой в Твиттере"></div>
+                <div class="vkontakte" title="Поделиться ссылкой во Вконтакте"></div>
+            </div>
+            <div id = 'codepr'>
+                <img src="img/logo.svg" alt="">
+            </div>
+        </footer>
+    </body>
+
+<!-- Mirrored from snapme.ru/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 May 2015 11:00:18 GMT -->
+</html>

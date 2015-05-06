@@ -1,0 +1,46 @@
+{
+    "data": [
+        {
+            "name"  : "Илья Орлов",
+            "links" :
+              {
+                "link1": "vk.com",
+                "link2": "instagram.com",
+                "link3": "500px.com"
+              },
+            "phone" : "+7 123 456-78-90"
+        },
+        {
+            "name"  : "Мигель Ревериего",
+            "links" :
+              {
+                "link1": "vk.com",
+                "link2": "instagram.com",
+                "link3": "500px.com"
+              },
+            "phone" : "+7 123 094-87-65"
+        },
+        {
+            "name"  : "Джулия Маргарет Камерон",
+            "links" :
+              {
+                "link1": "vk.com",
+                "link2": "500px.com"
+              },
+            "phone" : "+7 123 094-87-65"
+        },
+        {
+            "name"  : "Андреас Гурски",
+            "links" :
+              {
+                "link1": "vk.com",
+                "link2": "instagram.com"
+              },
+            "phone" : "+7 123 094-87-65"
+        }
+    ]
+}
+
+
+
+

@@ -1,0 +1,252 @@
+/* -------= imports =------- */
+@import "fonts";
+@import "mixins";
+
+/* -------= imports =------- */
+
+
+
+/* -------= search =------- */
+
+.container {
+
+    p,
+    label,
+    input,
+    select {
+        .roboto-thin;
+        font-weight: 600;
+    }
+
+}
+
+.search__block {
+
+    p {
+        margin-top: 16px;
+    }
+
+}
+
+.paragraph__marg-bottom_38px {
+    margin-bottom: 38px;
+}
+.paragraph__marg-bottom_94px {
+    margin-bottom: 94px;
+}
+
+.form__radio-btns {
+    .clearfix;
+}
+
+.form__radio-btns_noclear {
+    clear: left;
+}
+
+.form__radio-btns_div {
+    label {
+        cursor: pointer;
+        .roboto-thin;
+    }
+}
+
+.snapme-form__radio-btns {
+    display: none;
+}
+
+.snapme-form__radio-btns_div {
+    cursor: pointer;
+    background: url('../static/img/rdo-btn-sprite.png') no-repeat;
+	width: 17px;
+	height: 17px;
+    float: left;
+    margin-right: 9px;
+    margin-top: 2px;
+    margin-left: 5px;
+}
+
+.snapme-form__radio-btns_checked {
+	background-position: 0 0;
+}
+
+.snapme-form__radio-btns_unchecked {
+	background-position: 0 -18px ;
+}
+
+.snapme-form__query_marg-top {
+    margin-top: 20px;
+}
+
+.snapme-form__select {
+    margin-top: 4px;
+    border: rgba(255, 255, 255, 0.5) 2px solid;
+    border-radius: 5px;
+    display: block;
+    height: 26px;
+    width: calc(100%);
+    overflow: hidden;
+    background: url('../static/img/select-arrow.png') center right no-repeat;
+}
+
+.snapme-form__select {
+    select {
+        width: calc(100% + 32px);
+        background: transparent;
+        background: rgba(0, 0, 0, 0);
+        border: 0;
+        z-index: 100;
+    }
+}
+
+.snapme-form__select-city {
+    padding: 3px 10px;
+    border: rgba(255, 255, 255, 0.5) 2px solid;
+    border-radius: 5px;
+    display: block;
+    height: 26px;
+    background-color: transparent;
+
+    option {
+        color: #000000;
+    }
+
+}
+
+.snapme-form__submit-btn {
+    color: #4A4A4A;
+    background-color: white;
+    border-radius: 6px;
+    margin-top: 12px;
+    font-size: 14px;
+    padding: 1px 8px;
+    border-style: solid;
+}
+
+.form__search {
+    margin-top: 67px;
+    margin-bottom: 46px;
+}
+
+.person__social-links {
+    .clearfix;
+}
+
+.person__photolink {
+    vertical-align: middle;
+    display: inline-block;
+    position:relative;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-left: 7px;
+    margin-bottom: 8px;
+    color: black;
+    font-size: 12px;
+    background-color: rgb(223, 226, 229);
+}
+
+.person__photolink a {
+    display: block;
+    text-overflow: ellipsis;
+    max-width: 100px;
+    overflow: hidden;
+}
+
+.person__photolink a:link,
+.person__photolink a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.no-padding-left-right__15px {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.result__person {
+    overflow: auto;
+    margin-bottom: 30px;
+    min-height: 20px;
+    max-height: 500px;
+}
+
+.person__name,
+.person__social-links,
+.person__phone {
+    span {
+        .roboto-thin;
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+}
+
+.result__person_last-child {
+    margin-bottom: 40px;
+}
+
+.padding-right__15px {
+    padding-right: 15px;
+}
+
+.logo__link_reset {
+    color: #ffffff;
+
+    & :hover {
+        color: #ffffff;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 769px) and (max-width: 993px) {
+
+    .snapme-form__select-xs {
+        padding-right: 15px;
+    }
+
+    .result__person {
+        margin-bottom: 10px;
+    }
+
+    .result__person_last-child {
+        margin-bottom: 30px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .snapme-form__select-xs {
+        padding-right: 15px;
+    }
+
+    .result__person {
+        margin-bottom: 10px;
+    }
+
+    .result__person_last-child {
+        margin-bottom: 30px;
+    }
+
+}
+
+/* -------= search =------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+

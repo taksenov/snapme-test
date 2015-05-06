@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" xmlns="http://www.w3.org/1999/html"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>snapme</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <meta property="og:title" content="snapme">
+    <meta property="og:url" content="index.html">
+    <meta property="og:site_name" content="snapme"/>
+    <meta property="og:description" content="Описание здесь"/>
+    <meta property="og:image" content="img/test.jpg"/>
+    <meta property="fb:app_id" content="912438312141474"/>
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@burlesc0" />
+    <meta name="twitter:title" content="snapme" />
+    <meta name="twitter:description" content="Описание здесь." />
+    <meta name="twitter:image" content="img/test.jpg" />
+
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="icon" type="image/png" href="fav.ico">
+
+    <!-- все приколюхи для html файла дерни из папки с бойлерплейтом -->
+
+    <!-- build:css css/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="css/social-likes_flat.css" />
+    <link rel="stylesheet" href="bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.css" />
+
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- для продакшена не забудь расскомментировать -->
+    <!-- build:css css/custom.css -->
+    <!--<link rel="stylesheet" href="css/app-custom.css" />-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- endbuild -->
+
+    <!-- LESS на продакшене закомментировать -->
+    <link  href="less/main.less" rel="stylesheet/less" type="text/css">
+
+
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+    <div id="myCarousel" data-interval = '20000' class="carousel container slide">
+        <div class="carousel-inner">
+            <div class="active item background" id = 'back-1'>
+            </div>
+            <div class="item background" id = 'back-2'>
+            </div>
+        </div>
+    </div>
+
+    <div id = 'wrap'>
+        <div class = 'container'>
+            <div class = 'row'>
+                <a href="/" class="logo__link_reset">
+                    <div class='col-md-4 content-column'>
+                        <p id='logo'>snapme</p>
+                    </div>
+                </a>
+
+                <div class = "col-md-4 content-column search__block">
+
+                    <p class = 'thin paragraph__marg-bottom_38px'>Добро пожаловать на страницу поиска!</p>
+                    <p class = 'thin paragraph__marg-bottom_94px'>Здесь вы можете найти фотографа или <br/> модель! </p>
+
+                    <form id = 'formSearch' method="post" autocomplete="off" class="form__search">
+                        <div class="form-group">
+                            <div class="row form__radio-btns">
+                                <div class="col-lg-6 form__radio-btns_noclear">
+                                    <div class="form__radio-btns_div">
+                                        <input class="snapme-form__radio-btns" type="radio" id="snapme-form__photografer_rdo-btn" name="photorgrapher_rdo-btn">
+                                        <div class="snapme-form__radio-btns_div snapme-form__radio-btns_checked" id="snapme-form__photografer_div"></div>
+                                        <label for="snapme-form__photografer_rdo-btn">фоторгаф</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 form__radio-btns_noclear">
+                                    <div class="form__radio-btns_div">
+                                        <input class="snapme-form__radio-btns" type="radio" id="snapme-form__model_rdo-btn" name="model_rdo-btn">
+                                        <div class="snapme-form__radio-btns_div snapme-form__radio-btns_unchecked" id="snapme-form__model_div"></div>
+                                        <label for="snapme-form__model_rdo-btn">модель</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class = 'row form-inputs snapme-form__query_marg-top'>
+                                <div class = 'col-xs-12 col-lg-12'>
+                                    <input class = 'text transparent' id = 'snapme-form-query' name = 'query' type="text" placeholder="Фамилия, имя или другой ваш запрос..." required autofocus>
+                                </div>
+                                <div class = 'col-xs-12 col-lg-6 snapme-form__select-xs'>
+                                    <div class="snapme-form__select">
+                                        <select class="snapme-form__select-city" id="select-city" name="select-city" size="1">
+                                            <option>
+                                                Москва
+                                            </option>
+                                            <option>
+                                                Санкт-Петербург
+                                            </option>
+                                            <option>
+                                                Ярославль
+                                            </option>
+                                            <option>
+                                                Пенза
+                                            </option>
+                                            <option>
+                                                Лондон
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class = 'row'>
+                            <div class = 'col-xs-6 photo-type-column'>
+                                <div class="form-group">
+                                    <p id = 'photo-type-header'>Тип съемки:</p>
+                                    <div class = 'snapme-photo-type'>
+                                        <input class = 'checkbox' id = 'id1' name = 'photo-type[]' value = 'интерьер' type="checkbox">
+                                        <label for="id1">интерьер</label>
+                                    </div>
+                                    <div class = 'snapme-photo-type'>
+                                        <input class = 'checkbox' id = 'id2' name = 'photo-type[]' value = 'студия' type="checkbox">
+                                        <label for="id2">студия</label>
+                                    </div>
+                                    <div class = 'snapme-photo-type'>
+                                        <input class = 'checkbox' id = 'id3' name = 'photo-type[]' value = 'природа' type="checkbox">
+                                        <label for="id3">природа</label>
+                                    </div>
+                                    <div class = 'snapme-photo-type' id = 'insert-place'>
+                                        <img class = 'addSign ' id = 'add-photo-type' src="static/img/plus.svg" alt=""/>
+                                        <input type="text" id = 'new-photo-type-name' placeholder='другое'>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class = 'col-xs-6 payment-type-column'>
+                                <div class="form-group" id = 'payment-types'>
+                                    <p id = 'payment-type-header'>Оплата:</p>
+                                    <div class = 'snapme-payment-type'>
+                                        <input class = 'checkbox' id = 'payment-free' name = 'payment-type[]' value = 'бесплатно' type="checkbox">
+                                        <label id = 'payment-type-free' for="payment-free">бесплатно</label>
+                                    </div>
+                                    <div class = 'snapme-payment-type'>
+                                        <input class = 'checkbox payment' id = 'payment-rent' name = 'payment-type[]' value = 'аренда' type="checkbox">
+                                        <label class = 'payment-type-option' for="payment-rent">оплата аренды</label>
+                                    </div>
+                                    <div class = 'snapme-payment-type'>
+                                        <input class = 'checkbox payment' id = 'payment-visagist' name = 'payment-type[]' value = 'визажист' type="checkbox">
+                                        <label class = 'payment-type-option' for="payment-visagist">оплата визажиста</label>
+                                    </div>
+                                    <div class = 'snapme-payment-type'>
+                                        <input class = 'checkbox payment' id = 'payment-photo' name = 'payment-type[]' value = 'съемка' type="checkbox">
+                                        <label class = 'payment-type-option' for="payment-photo">оплата съемки</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type = 'submit' id = 'snapme-form-submit__search' value = 'Искать' class="snapme-form__submit-btn">
+                    </form>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 padding-right__15px">
+                    <div class="divider-block"></div>
+                </div>
+            </div>
+
+            <!-- search result -->
+            <div class="row search__result">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 padding-right__15px">
+
+                    <ul class="persons__list" id="valid">
+                        <!-- сюда генерятся результаты поиска -->
+                    </ul>
+
+                    <div class="result__person_last-child"></div>
+
+                </div>
+            </div>
+            <!-- search result -->
+
+        </div>
+    </div>
+
+
+
+
+
+    <footer class = 'footer'>
+        <div class="social-likes social-likes_notext">
+            <div class="facebook" title="Поделиться ссылкой на Фейсбуке"></div>
+            <div class="twitter" title="Поделиться ссылкой в Твиттере"></div>
+            <div class="vkontakte" title="Поделиться ссылкой во Вконтакте"></div>
+        </div>
+        <div id = 'codepr'>
+            <img src="static/img/logo.svg" alt="">
+        </div>
+    </footer>
+
+    <!-- результаты поиска -->
+    <script id="template" type="text/x-handlebars-template">
+        {{#each data}}
+
+            <li class="result__person">
+                <div class="col-md-4 col-lg-4 hidden-xs hidden-sm text-left person__name no-padding-left-right__15px">
+                    <span>
+                        {{name}}
+                    </span>
+                </div>
+                <div class="col-md-4 col-lg-4 hidden-xs hidden-sm text-center person__social-links no-padding-left-right__15px">
+
+                    {{#each links}}
+                        <div class = 'person__photolink'>
+                            <a target="_blank" href="#">{{this}}</a>
+                        </div>
+                    {{/each}}
+
+                </div>
+                <div class="col-md-4 col-lg-4 hidden-xs hidden-sm text-right person__phone no-padding-left-right__15px">
+                    <span>
+                        {{phone}}
+                    </span>
+                </div>
+
+                <!-- только на телефонах и планшетах -->
+                <div class="col-xs-12 col-sm-12 hidden-md text-center hidden-lg person__name no-padding-left-right__15px">
+                    <span>
+                        {{name}}
+                    </span>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 hidden-md text-center hidden-lg person__phone no-padding-left-right__15px">
+                    <span>
+                        {{phone}}
+                    </span>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 hidden-md text-center hidden-lg person__social-links no-padding-left-right__15px">
+
+                    {{#each links}}
+                        <div class = 'person__photolink'>
+                            <a target="_blank" href="#">{{this}}</a>
+                        </div>
+                    {{/each}}
+
+                </div>
+            </li>
+
+        {{/each}}
+    </script>
+    <!-- результаты поиска -->
+
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!--<script src="bower_components/boilerplate/assets/js/main.js"></script>-->
+    <script src="bower_components/jqueryui/jquery-ui.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.js"></script>
+    <script src="bower_components/social-likes/src/social-likes.js"></script>
+    <script src="js/handlebars-v3.0.3.js" type="text/javascript"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/custom.js -->
+    <script src="js/source.js"></script>
+    <script src="js/common.js"></script>
+    <!-- endbuild -->
+
+<script type="text/javascript">
+
+</script>
+
+
+    <!-- Не забудь подключить сюда less.js -->
+    <!-- а на продакшене закомментировать -->
+    <script src="bower_components/less/dist/less.js"></script>
+
+
+</body>
+</html>
